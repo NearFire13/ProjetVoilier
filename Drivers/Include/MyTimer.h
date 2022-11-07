@@ -50,4 +50,6 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) ;
 
 void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio ) ;
 
+void MyTimer_CodeurIncremental(TIM_TypeDef * Timer);
+
 #endif
