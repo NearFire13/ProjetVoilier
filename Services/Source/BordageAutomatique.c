@@ -21,3 +21,4 @@ void BAUTO_WaitForIndex(TIM_TypeDef * Timer, MyGPIO_Struct_TypeDef GPIO)
 	}
 	Timer->CNT = 0;
 }
+
