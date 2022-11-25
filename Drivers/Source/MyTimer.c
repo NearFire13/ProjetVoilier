@@ -62,7 +62,8 @@ void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio, void (* callback)(void)
 	}
 }
 
-void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) {
+void MyTimer_PWM( TIM_TypeDef * Timer , char Channel )
+{
 	if(Timer == TIM1){
 		if(Channel == 1){
 			Timer->CCMR1 |= 0x1 << 5 | 0x1 <<  6;
@@ -123,18 +124,30 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) {
 	Timer->EGR |= 0x1;
 }
 
-void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio ) {
+void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio )
+{
 	if(Channel == 1){
-			Timer->CCR1 = ratio * Timer->ARR / 100;
+			Timer->CCR1 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 2){
-			Timer->CCR2 = ratio * Timer->ARR / 100;
+			Timer->CCR2 = (ratio * Timer->ARR )/ 1000;
 		}
 		if(Channel == 3){
-			Timer->CCR3 = ratio * Timer->ARR / 100;
+			Timer->CCR3 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 4){
-			Timer->CCR4 = ratio * Timer->ARR / 100;
+			Timer->CCR4 = (ratio * Timer->ARR) / 1000;
 		}
 }
- 
+
+void MyTimer_CodeurIncremental(TIM_TypeDef * Timer)
+{
+	// Select Encoder Interface Mode en Entrée (nécessaire pour configurer les channels)
+	Timer->SMCR |= 0x01 << 0 | 0x1 <<  1;
+	Timer->SMCR &= ~(0x01 << 2);
+	
+	// Configuration de la Capture des 2 Channels sur les Fronts Montants
+	Timer->CCER &= ~(0x01 << 1);
+	Timer->CCER &= ~(0x01 << 5);
+}
+
