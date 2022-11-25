@@ -57,8 +57,8 @@ void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio, void (* callback)(void)
 		NVIC_SetPriority(TIM3_IRQn, Prio);
 	}
 	if(Timer == TIM4){
-		NVIC_EnableIRQ(TIM3_IRQn);
-		NVIC_SetPriority(TIM3_IRQn, Prio);
+		NVIC_EnableIRQ(TIM4_IRQn);
+		NVIC_SetPriority(TIM4_IRQn, Prio);
 	}
 }
 
@@ -125,16 +125,16 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) {
 
 void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio ) {
 	if(Channel == 1){
-			Timer->CCR1 = ratio * Timer->ARR / 100;
+			Timer->CCR1 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 2){
-			Timer->CCR2 = ratio * Timer->ARR / 100;
+			Timer->CCR2 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 3){
-			Timer->CCR3 = ratio * Timer->ARR / 100;
+			Timer->CCR3 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 4){
-			Timer->CCR4 = ratio * Timer->ARR / 100;
+			Timer->CCR4 = (ratio * Timer->ARR) / 1000;
 		}
 }
  
