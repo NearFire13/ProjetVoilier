@@ -18,17 +18,17 @@ int main(void)
 	
 	Timer3.Timer = TIM3;
 	Timer3.ARR = 14400-1;
-	Timer3.PSC = 10-1;
+	Timer3.PSC = 100-1;
 	MyTimer_Base_Init(&Timer3);
 	MyTimer_Base_Start(Timer3.Timer);
 
 	PA4.GPIO = GPIOA;
 	PA4.GPIO_Pin = 4;
-  PA4.GPIO_Conf = In_Floating;
+	PA4.GPIO_Conf = In_Floating;
 	
 	PA6.GPIO = GPIOA;
 	PA6.GPIO_Pin = 6;
-  PA6.GPIO_Conf = AltOut_Ppull;
+	PA6.GPIO_Conf = AltOut_Ppull;
 	
 	MyGPIO_Init(&PA6);
 	
@@ -53,7 +53,7 @@ int main(void)
 		{
 			teta = -(2*a/3)+210;
 		}
-		ratio = (50*teta/180)+50;
+		ratio = ((50*teta)/90)+50;
 		MyTimer_Ratio(Timer3.Timer, 1, ratio);
 	}
 }
