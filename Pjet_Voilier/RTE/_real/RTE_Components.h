@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'uart' 
- * Target:  'simul' 
+ * Project: 'voilier' 
+ * Target:  'real' 
  */
 
 #ifndef RTE_COMPONENTS_H
