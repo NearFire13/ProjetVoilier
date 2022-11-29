@@ -52,6 +52,4 @@ void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, int ratio ) ;
 
 void MyTimer_CodeurIncremental(TIM_TypeDef * Timer);
 
-void MyTimer_CodeurIncremental(TIM_TypeDef * Timer);
-
 #endif

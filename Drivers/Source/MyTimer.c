@@ -124,25 +124,13 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel )
 	Timer->EGR |= 0x1;
 }
 
-<<<<<<< HEAD
-void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio )
-=======
 void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, int ratio )
->>>>>>> master
 {
 	if(Channel == 1){
 			Timer->CCR1 = (ratio * Timer->ARR) / 1000;
 		}
 		if(Channel == 2){
-<<<<<<< HEAD
-<<<<<<< HEAD
 			Timer->CCR2 = (ratio * Timer->ARR )/ 1000;
-=======
-			Timer->CCR2 = (ratio * Timer->ARR) / 1000;
->>>>>>> USART
-=======
-			Timer->CCR2 = (ratio * Timer->ARR )/ 1000;
->>>>>>> master
 		}
 		if(Channel == 3){
 			Timer->CCR3 = (ratio * Timer->ARR) / 1000;

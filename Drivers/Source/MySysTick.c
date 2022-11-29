@@ -1,10 +1,10 @@
 #include "MySysTick.h"
 
-void (*ptr)(void);
+void (*ptrSys)(void);
 
 void SysTick_Handler(void)
 {
-	(*ptr)();
+	(*ptrSys)();
 }
 
 void Systick_Init(int PERIOD)
@@ -20,7 +20,7 @@ void Systick_Prio_IT(char Prio, void (*Systick_function)(void) )
 {
 	SysTick->CTRL |= SysTick_CTRL_TICKINT; // Activation de la demande d'interruption
 	
-	ptr = Systick_function;
+	ptrSys = Systick_function;
 	
 	NVIC_EnableIRQ(SysTick_IRQn);
 	NVIC_SetPriority(SysTick_IRQn, Prio);
