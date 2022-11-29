@@ -19,7 +19,8 @@ void Transmission_Init(USART_TypeDef * USART, MyTimer_Struct_TypeDef Timer, MyGP
 
 void Transmission_Send(USART_TypeDef * USART, char * message, int length){
 	// Send Data via USART
-	for(int i = 0; i < length; i++){
+	int i = 0;
+	for(i = 0; i < length; i++){
 		MyUART_Send(USART, *(message + i));
 	}
 }

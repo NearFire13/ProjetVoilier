@@ -48,7 +48,9 @@ void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio, void (* callback) ( voi
 
 void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) ;
 
-void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, char ratio ) ;
+void MyTimer_Ratio ( TIM_TypeDef * Timer , char Channel, int ratio ) ;
+
+void MyTimer_CodeurIncremental(TIM_TypeDef * Timer);
 
 void MyTimer_CodeurIncremental(TIM_TypeDef * Timer);
 

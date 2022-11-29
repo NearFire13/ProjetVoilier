@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\MesDrivers\Include</IncludePath>
+              <IncludePath>\\netapp2\agbeti-m\KeilMarcoBenjamin\ProjetVoilier\Drivers\Include;..\Services\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -561,6 +561,16 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\MyUART.c</FilePath>
             </File>
+            <File>
+              <FileName>MySysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Source\MySysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>MySysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\MySysTick.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -575,6 +585,16 @@
               <FileName>Transmission.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Services\Source\Transmission.c</FilePath>
+            </File>
+            <File>
+              <FileName>BordageAutomatique.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\BordageAutomatique.c</FilePath>
+            </File>
+            <File>
+              <FileName>BordageAutomatique.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\BordageAutomatique.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1008,7 +1028,7 @@
                   <MiscControls></MiscControls>
                   <Define></Define>
                   <Undefine></Undefine>
-                  <IncludePath>..\Drivers\Include</IncludePath>
+                  <IncludePath>..\Drivers\Include;..\Services\Include</IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
@@ -1192,6 +1212,16 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\MyUART.c</FilePath>
             </File>
+            <File>
+              <FileName>MySysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Source\MySysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>MySysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\MySysTick.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1242,7 +1272,7 @@
                   <MiscControls></MiscControls>
                   <Define></Define>
                   <Undefine></Undefine>
-                  <IncludePath>..\Services\Include</IncludePath>
+                  <IncludePath>..\Services\Include;..\Drivers\Include</IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
@@ -1275,6 +1305,16 @@
               <FileName>Transmission.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Services\Source\Transmission.c</FilePath>
+            </File>
+            <File>
+              <FileName>BordageAutomatique.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\BordageAutomatique.c</FilePath>
+            </File>
+            <File>
+              <FileName>BordageAutomatique.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\BordageAutomatique.h</FilePath>
             </File>
           </Files>
         </Group>
