@@ -561,6 +561,16 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\MyUART.c</FilePath>
             </File>
+            <File>
+              <FileName>MySysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Source\MySysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>MySysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\MySysTick.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1201,6 +1211,16 @@
               <FileName>MyUART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\Source\MyUART.c</FilePath>
+            </File>
+            <File>
+              <FileName>MySysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\Source\MySysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>MySysTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\Include\MySysTick.h</FilePath>
             </File>
           </Files>
         </Group>
